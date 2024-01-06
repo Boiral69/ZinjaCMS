@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "magazines",
+  "info": {
+    "singularName": "magazine",
+    "pluralName": "magazines",
+    "displayName": "Magazine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "numero": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "couverture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "sommaire": {
+      "type": "blocks"
+    }
+  }
+}
